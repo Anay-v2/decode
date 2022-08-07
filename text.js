@@ -172,6 +172,80 @@ function ascii(string, decode) {
 	return asciiEncode(string)
 }
 
+const baconl = {
+	a: 'AAAAA',
+	b: 'AAAAB',
+	c: 'AAABA',
+	d: 'AAABB',
+	e: 'AABAA',
+	f: 'AABAB',
+	g: 'AABBA',
+	h: 'AABBB',
+	i: 'ABAAA',
+	j: 'ABAAA',
+	k: 'ABAAB',
+	l: 'ABABA',
+	m: 'ABABB',
+	n: 'ABBAA',
+	o: 'ABBAB',
+	p: 'ABBBA',
+	q: 'ABBBB',
+	r: 'BAAAA',
+	s: 'BAAAB',
+	t: 'BAABA',
+	u: 'BAABB',
+	v: 'BAABB',
+	w: 'BABAA',
+	x: 'BABAB',
+	y: 'BABBA',
+	z: 'BABBB',
+}
+
+const baconld = {
+	aaaaa: 'a',
+	aaaab: 'b',
+	aaaba: 'c',
+	aaabb: 'd',
+	aabaa: 'e',
+	aabab: 'f',
+	aabba: 'g',
+	aabbb: 'h',
+	abaaa: 'i',
+	abaab: 'k',
+	ababa: 'l',
+	ababb: 'm',
+	abbaa: 'n',
+	abbab: 'o',
+	abbba: 'p',
+	abbbb: 'q',
+	baaaa: 'r',
+	baaab: 's',
+	baaba: 't',
+	baabb: 'u',
+	babaa: 'w',
+	babab: 'x',
+	babba: 'y',
+	babbb: 'z',
+}
+
+function baconEncode(string) {
+	return [...string.toLowerCase()]
+		.map(letter => baconl[letter] || letter)
+		.join(' ')
+}
+
+function baconDecode(string) {
+	return string
+		.split(' ')
+		.map(bacon => baconld[bacon.toLowerCase()] || bacon)
+		.join('')
+}
+
+function bacon(string, decode) {
+	if (decode) return baconDecode(string)
+	return baconEncode(string)
+}
+
 /*
 
 
@@ -206,6 +280,7 @@ function encode() {
 	else if (method == 'morse') out = morse(string)
 	else if (method == 'base64') out = base64(string)
 	else if (method == 'ascii') out = ascii(string)
+	else if (method == 'bacon') out = bacon(string)
 	document.querySelector('#out').value = out
 }
 
@@ -218,5 +293,6 @@ function decode() {
 	else if (method == 'morse') out = morse(string, true)
 	else if (method == 'base64') out = base64(string, true)
 	else if (method == 'ascii') out = ascii(string, true)
+	else if (method == 'bacon') out = bacon(string, true)
 	document.querySelector('#out').value = out
 }
