@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Decode</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				corePlugins: {
+					preflight: false,
+				},
+			}
+		</script>
+	</head>
+	<body
+		class="bg-slate-900 grid place-items-center text-slate-100 overflow-hidden"
+	>
+		<div class="grid place-items-center">
+			<h1 class="text-7xl">Decode</h1>
+			<div class="flex gap-x-4">
+				<button
+					id="text"
+					class="rounded-md outline-none bg-slate-500 border-none py-[1rem] px-[2rem] hover:bg-slate-600 ring-0 ring-slate-200/50 duration-300 focus:ring-4 text-slate-100"
+				>
+					Text
+				</button>
+				<button
+					id="qrcode"
+					class="rounded-md outline-none bg-slate-500 border-none py-[1rem] px-[2rem] hover:bg-slate-600 ring-0 ring-slate-200/50 duration-300 focus:ring-4 text-slate-100"
+				>
+					QR Code
+				</button>
+			</div>
+		</div>
+		<script src="index.js"></script>
+	</body>
+</html>
