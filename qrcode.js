@@ -7,6 +7,8 @@ function generate() {
 		text: input.value,
 		width: 128,
 		height: 128,
+        colorDark: document.querySelector('#dc').value,
+        colorLight: document.querySelector('#lc').value
 	})
 }
 
