@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Decode - Brute Force Caeser Cipher</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				corePlugins: {
+					preflight: false,
+				},
+			}
+		</script>
+	</head>
+	<body class="bg-slate-900 grid place-items-center text-slate-100">
+        <h1>Brute Force Caeser Cipher</h1>
+        <BR></BR><BR></BR><BR></BR><BR></BR><BR></BR>
+        <div class="flex gap-x-4">
+            <input
+                id="in"
+                placeholder="Input"
+                class="placeholder:text-slate-100 outline-none bg-slate-500 border-none py-[.5rem] px-[1rem] hover:bg-slate-600 ring-0 ring-slate-200/50 duration-300 focus:ring-4 text-slate-100 h-25 text-center"
+            />
+            <div class="grid">
+                <button
+                    id="de"
+                    class="rounded-md outline-none bg-slate-500 border-none py-[0.5rem] px-[1rem] hover:bg-red-600 ring-0 ring-red-200/50 duration-300 focus:ring-4 text-slate-100 bg-red-500"
+                >
+                    <svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-5 w-5"
+							viewBox="0 0 20 20"
+							fill="currentColor"
+						>
+							<path
+								d="M10 2a5 5 0 00-5 5v2a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2H7V7a3 3 0 015.905-.75 1 1 0 001.937-.5A5.002 5.002 0 0010 2z"
+							/>
+						</svg>                   
+                    <br />
+                    Decode
+                </button>
+                <br />
+            </div>
+        </div>
+        <p
+                    id="out"
+                    class="bg-slate-500 py-[.5rem] px-[1rem]    text-slate-100 h-25 text-center"
+                />
+        <script src="bruteforce.js"></script>
+    </body>
+</html>
